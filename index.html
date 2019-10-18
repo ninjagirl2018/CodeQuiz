@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!--<link rel="stylesheet" href="css/reset.css">-->
+    <link rel="stylesheet" href="css/styles.css">
+    <title>Coding Quiz with Timer</title>
+</head>
+<body>
+    
+    <!-- the All Windows div is the main div that will display/hide each "window"-->
+    <div class="allWindows">
+        <!-- Nav bar to include the link to see high scores and the running timer-->
+        <nav class="ribbon">
+            <div><a id="viewHighScores" href="#">View All High Scores</a></div>
+            <div id="timer">Timer: <span id="timer" >1:00</span></p>
+        </nav>
+
+        <!-- the pre-quiz window sets out the rules of the game -->
+        <div class="preQuizWindow messageToUser hide">
+            <h3 class="messageToUser">Coding Quiz Challenge</h3>
+            <p class="messageToUser">Try to answer the following code-related questions within the time limit. Keep in mind that incorrect answers will penalize your scoretime by <span id='ten'>10</span> seconds!</p>
+            <button id="startButton" class="button">Start Quiz</button>
+        </div>
+
+        <!-- this is the confirmation window that will get the user started and the timer started-->
+        <div class="confirmPlay messageToUser hide ">
+            <h3 class='messageToUser' >Ready? Set, Go!</h3>
+            <button class="button">Let's Do It!</button>
+        </div>
+
+        <!-- window for the quiz questions -->
+        <div class="quizQuestions hide ">
+            <div class="messageToUser">
+                    <h3 id='quizQuestionsTitle' >sample</h3>
+            </div>
+            <div class="bottom messageToUser ">
+                <div><button class="button">1. <span id='but1'>sample</span> </button></div>
+                <div><button class="button">2. <span id='but2'>sample</span> </button></div>
+                <div><button class="button">3. <span id='but3'>sample</span></button></div>
+                <div><button class="button">4. <span id='but4'>sample</span></button></div>
+            </div>
+            <div class="result">
+                <div class="rightAnswer hide">Good Job!</div>
+                <div class="wrongAnswer hide">Oops! 10 Second Penalty</div>
+            </div>
+        </div>
+
+
+        <!-- window to display final results -->
+        <div class="quizResults hide">
+                <h3 class="messageToUser">You Made It To The End!</h3>
+                <p class="messageToUser">Your final score is <span id="finalScore">sample</span>%</p>
+                <div class="userName">
+                    <label id="name" for="name"> Enter your Name: </label>
+                    <input id="playerName" type="text">
+                    <button id="submit" class="button">Submit</button>
+                </div>
+        </div>
+
+
+        <!--window to display high scores and to dump local storage high scores -->
+    <div class="highScores hide">
+        <h3 class="messageToUser">Recent Highscores:</h3>
+        <div id="scores">
+        </div>
+        <div>
+            <button id="restartButton" class="button">Restart</button>
+            <button id="clearHighScores" class="button">Clear Highscores</button>
+        </div>
+    </div>
+
+        
+</div>
+
+<footer>
+    <p id=footer-text>copyright</p>
+</footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TimelineMax.min.js" integrity="sha256-fIkQKQryItPqpaWZbtwG25Jp2p5ujqo/NwJrfqAB+Qk=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js" integrity="sha256-lPE3wjN2a7ABWHbGz7+MKBJaykyzqCbU96BJWjio86U=" crossorigin="anonymous"></script>
+    <script src="js/script.js"></script>
+    <!-- <script type="module" src="js/questions.js"></script> -->
+</body>
+</html>

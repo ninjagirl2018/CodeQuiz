@@ -1,0 +1,221 @@
+
+
+body{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background-image: url("./hotel-wallpaper.png");
+    font-family: sans-serif;
+    color: #666666;
+}
+
+
+.allWindows {
+    position: relative;
+}
+
+.ribbon {
+    display: flex;
+    justify-content: space-between;
+    overflow: hidden;
+    height: 95px;
+    width:100%;
+    background-color: #4aaaa5;
+    font-weight: bold;
+    padding-right: 10px 10px;
+    border-top: 2px solid #dddddd;
+    border-bottom: 2px solid #dddddd;
+    margin-right: 25px;
+    align-items: center;
+}
+
+#timer {
+    width: 125px;
+    color: #dddddd;
+}
+
+.heading {
+    font-size: 24px;
+}
+
+#viewHighScores{
+    padding: 18px;
+    text-decoration: none;
+    border-radius: 5px 5px 0px 0px;
+    background-color: white;
+    color: #4aaaa5;
+    margin-left: 20px;
+}
+
+#ten{
+    color: red;
+}
+
+.button, #doIt{
+    position: relative;
+    box-sizing: border-box;
+    background-color: #4aaaa5;
+    border:1px solid #dddddd;
+    height: 35px;
+    color:white;
+    padding: 0px 10px;
+    border-radius: 5px;
+    margin: 10px;
+    font-size: 15px;
+}
+
+.confirmPlay {
+    align-self: center;
+    text-align: center;
+    font-size: 30px;
+}
+
+
+.preQuizWindow, .confirm {
+    align-self: center;
+    text-align: center;
+    padding: 0 15%;
+   
+}
+
+.preQuizWindow h3, .confirm {
+    font-size: 30px;
+    font-weight: 900;
+}
+
+.preQuizWindow p{
+    font-size: 15px;
+    font-weight: 600;
+}
+
+
+
+.spaceDown{
+    margin-bottom: 25px;
+}
+
+.bottom{
+    display: flex;
+    flex-direction: column;
+}
+
+.questionCards{
+    padding: 0 15%;
+}
+
+.questionCards h3{
+    font-weight: 700;
+    font-size: 25px;
+}
+
+
+.line{ 
+    background-color: rgb(199, 199, 199);
+    height: 2px;
+    widows: 100%;
+    margin-bottom: 10px;
+}
+
+.answerStyle{
+    color: gray;
+    font-style: italic;
+    font-size: 20px; 
+    margin-bottom: 20px;
+}
+
+
+
+
+.blue{
+    background-color: blueviolet;
+}
+
+
+
+
+.allDone{
+    display: flex;
+    flex-direction: column;
+    padding: 0 15%;
+}
+
+.allDone h3{
+ font-size: 30px;
+ font-weight: 800;
+}
+
+.allDone p{
+    font-size: 20px;
+    font-weight: 500;
+}
+
+
+.initials{
+    font-size: 20px;
+    font-weight: 500;
+}
+
+
+#inputInit{
+    height: 23px;
+    width: 180px;
+    border: 1px solid rgb(67, 67, 255);
+    margin-top:6px;
+    border-radius: 3px;
+    box-shadow: 0px 4px 5px 0px rgb(190, 190, 190);
+}
+
+.highScores{
+    display: flex;
+    flex-direction: column;
+    padding: 0 15%;
+}
+
+.highScores h3{
+    font-size: 30px;
+    font-weight: 800;
+   }
+
+#scores p{
+    background-color:#4aaaa5;
+    box-sizing: border-box;
+    padding: 5px 10px;
+    border-radius: 3px;
+    margin-bottom: 10px;
+    transition: background-color 0.3s, box-shadow 0.4s;
+    color
+}
+
+#scores p:hover{
+    background-color: rgb(194, 159, 226);
+    box-shadow: inset 0px -1px 5px 0px rgb(216, 216, 216);
+}
+
+#scores p:focus{
+    background-color: rgb(194, 159, 226);
+}
+
+
+
+
+
+
+.hide{
+    display: none;
+}
+
+
+footer {
+    height:  55px;
+    background-color: #666666;
+    margin-top: 50px;
+    padding-top: 10px;
+    border-top: 8px solid #4aaaa5; 
+    font-size: 10px;
+    width: 100%;
+  }
+  
+  #footer-text {
+    text-align: center;
+    color: #dddddd;
+  }
