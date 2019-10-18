@@ -1,5 +1,4 @@
-//listing the questions as an array with the answers as strings
-var computer= [
+var questions = [
   {
     title: "Commonly used data types DO NOT include:",
     choices: ["strings", "booleans", "alerts", "numbers"],
@@ -20,11 +19,22 @@ var computer= [
     choices:["1998","1999","2001","2000"],
     answer:"2000",
   },
+  {
+      title:"When was the programming language C# released?",
+      choices:["1998","1999","2001","2000"],
+      answer:"2000",
+    },
+    {
+      title:"When was the programming language C# released?",
+      choices:["1998","1999","2001","2000"],
+      answer:"2000",
+    },
+    {
+      title:"When was the programming language C# released?",
+      choices:["1998","1999","2001","2000"],
+      answer:"2000",
+    },
 ]
-
-
-
-
 
 
 

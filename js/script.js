@@ -1,44 +1,6 @@
-var questions = [
-    {
-      title: "Commonly used data types DO NOT include:",
-      choices: ["strings", "booleans", "alerts", "numbers"],
-      answer: "alerts"
-    },
-    {
-      title: "The condition in an if / else statement is enclosed within ____.",
-      choices: ["quotes", "curly brackets", "parentheses", "square brackets"],
-      answer: "parentheses"
-    },
-    {
-      title :"Which internet company began life as an online bookstore called Cadabra?",
-      choices: ["Amazon","eBay","Overstock","Shopify"],
-      answer :"Amazon"
-    },
-    {
-      title:"When was the programming language C# released?",
-      choices:["1998","1999","2001","2000"],
-      answer:"2000",
-    },
-    {
-        title:"When was the programming language C# released?",
-        choices:["1998","1999","2001","2000"],
-        answer:"2000",
-      },
-      {
-        title:"When was the programming language C# released?",
-        choices:["1998","1999","2001","2000"],
-        answer:"2000",
-      },
-      {
-        title:"When was the programming language C# released?",
-        choices:["1998","1999","2001","2000"],
-        answer:"2000",
-      },
-  ]
-  
 
 var questions = [questions];
-let tl = new TimelineMax()
+let minute = new TimelineMax()
 
 
 // Start by listng out all the variables required
@@ -65,19 +27,9 @@ var restartButton = document.querySelector("#restartButton");
 var scoreBoard = document.querySelector("#scores");
 
 let confirmPlayData=[]
-//let dataLength=[];
-//let q;
-//let answer;
 let score;
-//let time;
-//let seconds;
 let intervalId;
 let scoreList=[];
-
-//const line = document.querySelector('.line')
-
-//const allButtons = document.querySelectorAll('.button')
-
 
 
 // 1. There are 3 Listeners:  Start Quiz, Confirm, and View Highscores that are not inside functions
@@ -95,10 +47,10 @@ function viewAllScores(){
     wrongAnswer.classList.add('hide');
     quizResults.classList.add('hide');
     preQuizWindow.classList.add('hide');
-    highScores.classList.remove('hide')
-    displayScores()
-    clearHighScores.addEventListener('click', clearScore )
-    restartButton.addEventListener('click',startOver)
+    highScores.classList.remove('hide');
+    displayScores();
+    clearHighScores.addEventListener('click', clearScore );
+    restartButton.addEventListener('click', startOver);
 }
 
 //Reset function sets the timer back to 0 and also runs inside the startGame function
@@ -179,7 +131,7 @@ function displayScores(){
 
     //if there is a score in local storage, retrieve it and and make it into a JS object and make it 
     //into an array called x or scoreList which takes in 2 parameters, the input of the player's name and 
-    //their
+    //their score as a percentage (can't get it to rank though)
     }else{
         scoreList=localStorage.getItem("keepScore");
         scoreList = JSON.parse(scoreList);
@@ -208,7 +160,7 @@ function saveScore(){
     }
 }
 
-//When game is over, timer is cleared, las question disappears
+//When game is over, timer is cleared, last question disappears
 function gameEnd(){
     clearInterval(intervalId)
     quizQuestions.classList.add("hide");
@@ -220,18 +172,19 @@ function gameEnd(){
     submit.addEventListener("click",saveScore);
 }
 
-//the Evaluate function 
+//the Evaluate function - works through the answers that are picked by the user keeps running through the questions until
+// it runs out of questions to ask, each time a question is answered it will run the quizActual function for the next question
 function evaluate(e){
     if (e.path[0].textContent === answer){
         setTimeout(()=>{
-            rightAnswer.classList.remove('hide');
-            line.classList.remove('hide')
+            rightAnswer.classList.remove("hide");
+            line.classList.remove("hide")
             setTimeout(()=>{
-                rightAnswer.classList.add('hide');
-                line.classList.add('hide')
+                rightAnswer.classList.add("hide");
+                line.classList.add("hide")
             },1000)
         },0)
-        wrongAnswer.classList.add('hide');
+        wrongAnswer.classList.add("hide");
         score++;
         if (dataLength.length ===0 ){
             gameEnd()
@@ -240,27 +193,24 @@ function evaluate(e){
         }
     } else {
         setTimeout(()=>{
-            wrongAnswer.classList.remove('hide');
-            line.classList.remove('hide')
+            wrongAnswer.classList.remove("hide");
+            line.classList.remove("hide")
             setTimeout(()=>{
-                wrongAnswer.classList.add('hide');
-                line.classList.add('hide')
+                wrongAnswer.classList.add("hide");
+                line.classList.add("hide");
             },1000)
         },0)
 
-    //penalize the player by reducing 10 seconds off the clock if the answer is wrong
+    //penalize the player by reducing 10 seconds off the clock if the answer is wrong and ends the game when the clock
+    //runs down to
         if (seconds === 0){
             setTimeout(()=>{
                 seconds = seconds - 10
-                tl.to(timer,0.5,{color:'red',})
-                .to(timer,0.2,{color:'black',});
             },1001)
         }else{
-            tl.to(timer,0.5,{color:'red',})
-            .to(timer,0.2,{color:'black',});
             seconds = seconds - 10
         }
-        rightAnswer.classList.add('hide');
+        rightAnswer.classList.add("hide");
         if (dataLength.length ===0 ){
             gameEnd()
         } else {
@@ -269,23 +219,25 @@ function evaluate(e){
     }
 }
 
+//here is the function that delivers the each question to the user and runs through
+//all the quesions in the question array and then runs the Evaluate function every time 
+//the user clicks an answer
 function quizActual(){
-    quizQuestions.classList.remove('hide')
-    wrongAnswer.classList.add('hide');
-    rightAnswer.classList.add('hide');
-    q = dataLength.shift()
-    answer = confirmPlayData[q].answer
+    quizQuestions.classList.remove("hide");
+    wrongAnswer.classList.add("hide");
+    rightAnswer.classList.add("hide");
+    q = dataLength.shift();
+    answer = confirmPlayData[q].answer;
     quizQuestionsTitle.textContent = confirmPlayData[q].title;
-    but1.textContent = confirmPlayData[q].choices[0]
-    but2.textContent = confirmPlayData[q].choices[1]
-    but3.textContent = confirmPlayData[q].choices[2]
-    but4.textContent = confirmPlayData[q].choices[3]
-    but1.addEventListener('click',evaluate)
-    but2.addEventListener('click',evaluate)
-    but3.addEventListener('click',evaluate)
-    but4.addEventListener('click',evaluate)
-
-    quizQuestions.classList.remove('hide');
+    but1.textContent = confirmPlayData[q].choices[0];
+    but2.textContent = confirmPlayData[q].choices[1];
+    but3.textContent = confirmPlayData[q].choices[2];
+    but4.textContent = confirmPlayData[q].choices[3];
+    but1.addEventListener("click",evaluate);
+    but2.addEventListener("click",evaluate);
+    but3.addEventListener("click",evaluate);
+    but4.addEventListener("click",evaluate);
+    quizQuestions.classList.remove("hide");
 }
 
 function startTimer(){
@@ -309,8 +261,4 @@ function startTimer(){
     },1000);
 }
 
-
-//function color (){
-  //  timer.style.color = 'red';
-//}
 
