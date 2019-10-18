@@ -1,5 +1,3 @@
-
-
 body{
     width: 100%;
     height: 100%;
@@ -8,7 +6,6 @@ body{
     font-family: sans-serif;
     color: #666666;
 }
-
 
 .allWindows {
     position: relative;
@@ -47,10 +44,6 @@ body{
     margin-left: 20px;
 }
 
-#ten{
-    color: red;
-}
-
 .button, #doIt{
     position: relative;
     box-sizing: border-box;
@@ -70,12 +63,10 @@ body{
     font-size: 30px;
 }
 
-
 .preQuizWindow, .confirm {
     align-self: center;
     text-align: center;
     padding: 0 15%;
-   
 }
 
 .preQuizWindow h3, .confirm {
@@ -88,81 +79,44 @@ body{
     font-weight: 600;
 }
 
-
-
-.spaceDown{
-    margin-bottom: 25px;
-}
-
-.bottom{
-    display: flex;
-    flex-direction: column;
-}
-
-.questionCards{
+.quizQuestions {
     padding: 0 15%;
 }
 
-.questionCards h3{
+#quizQuestionsTitle {
     font-weight: 700;
     font-size: 25px;
+    text-align: center;
 }
 
-
-.line{ 
-    background-color: rgb(199, 199, 199);
-    height: 2px;
-    widows: 100%;
-    margin-bottom: 10px;
-}
-
-.answerStyle{
-    color: gray;
-    font-style: italic;
-    font-size: 20px; 
-    margin-bottom: 20px;
-}
-
-
-
-
-.blue{
-    background-color: blueviolet;
-}
-
-
-
-
-.allDone{
+.quizResults {
     display: flex;
     flex-direction: column;
     padding: 0 15%;
+    align-items: center;
 }
 
-.allDone h3{
- font-size: 30px;
- font-weight: 800;
+.quizResults h3{
+    font-size: 30px;
+    font-weight: 800;
 }
 
-.allDone p{
+.quizResults p{
     font-size: 20px;
     font-weight: 500;
 }
 
-
-.initials{
+.userName{
     font-size: 20px;
     font-weight: 500;
+    color: #666666;
 }
 
-
-#inputInit{
+#playerName{
     height: 23px;
     width: 180px;
-    border: 1px solid rgb(67, 67, 255);
     margin-top:6px;
-    border-radius: 3px;
-    box-shadow: 0px 4px 5px 0px rgb(190, 190, 190);
+    border-radius: 2px solid #dddddd;
 }
 
 .highScores{
@@ -174,7 +128,7 @@ body{
 .highScores h3{
     font-size: 30px;
     font-weight: 800;
-   }
+}
 
 #scores p{
     background-color:#4aaaa5;
@@ -182,30 +136,14 @@ body{
     padding: 5px 10px;
     border-radius: 3px;
     margin-bottom: 10px;
-    transition: background-color 0.3s, box-shadow 0.4s;
-    color
+    color: #dddddd;
 }
-
-#scores p:hover{
-    background-color: rgb(194, 159, 226);
-    box-shadow: inset 0px -1px 5px 0px rgb(216, 216, 216);
-}
-
-#scores p:focus{
-    background-color: rgb(194, 159, 226);
-}
-
-
-
-
-
 
 .hide{
     display: none;
 }
 
-
-footer {
+.footer {
     height:  55px;
     background-color: #666666;
     margin-top: 50px;
@@ -213,9 +151,12 @@ footer {
     border-top: 8px solid #4aaaa5; 
     font-size: 10px;
     width: 100%;
-  }
+    position:absolute;
+    bottom:0;
+    width:100%;
+}
   
-  #footer-text {
+#footer-text {
     text-align: center;
     color: #dddddd;
-  }
+}
