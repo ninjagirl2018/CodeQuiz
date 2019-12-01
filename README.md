@@ -1,4 +1,4 @@
-# CodeQuiz
+
 CodeQuiz
 
 This assignment for Lesson 4 requires the building of a multiple choice quiz with an HTML file, CSS file, and 2 Javascript files.  The rationale behind 2 .js files is to separate out the mulltiple choice questions from the javacript functions.  This would allow users to continually update and change the questions being delivered on the application without interfering with the integrity of the javascript functions.
@@ -15,3 +15,8 @@ Most challenging aspects of the project:
 
 1.  Timer Function
 2.  The Evaluate function to cause a 10 second penalty
+
+Below is a link to the deployed deployed application, hosted by github pages:
+
+https://github.com/ninjagirl2018/CodeQuiz
+
