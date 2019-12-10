@@ -18,5 +18,5 @@ Most challenging aspects of the project:
 
 Below is a link to the deployed deployed application, hosted by github pages:
 
-https://github.com/ninjagirl2018/CodeQuiz
+https://ninjagirl2018.github.io/CodeQuiz/
 
